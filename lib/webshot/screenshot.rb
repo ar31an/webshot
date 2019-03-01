@@ -49,7 +49,7 @@ module Webshot
         @session_started = false
 
         # Open page
-        visit url
+        visit url if url.present?
 
         # Timeout
         sleep opts[:timeout] if opts[:timeout]

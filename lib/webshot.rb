@@ -27,7 +27,7 @@ module Webshot
     yield self
   end
 
-  # Capibara setup
+  # Capybara setup
   def self.capybara_setup!
     # By default Capybara will try to boot a rack application
     # automatically. You might want to switch off Capybara's
@@ -37,8 +37,9 @@ module Webshot
       Capybara::Poltergeist::Driver.new(app, {
         # Raise JavaScript errors to Ruby
         js_errors: false,
+        timeout: 250,
         # Additional command line options for PhantomJS
-        phantomjs_options: ['--ignore-ssl-errors=yes', '--ssl-protocol=any']
+        phantomjs_options: ['--ignore-ssl-errors=yes', '--ssl-protocol=any', '--load-images=yes']
       })
     end
     Capybara.current_driver = :poltergeist

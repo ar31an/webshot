@@ -20,7 +20,7 @@ module Webshot
 
   # User agent
   mattr_accessor :user_agent
-  @@user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+  @@user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/601.3.9 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/601.3.9"
 
   # Customize settings
   def self.setup
